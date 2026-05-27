@@ -1,0 +1,150 @@
+﻿
+
+/* Background wrapper for both login + dashboard */
+.hr-bg,
+.main-bg {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(0,0,0,0.70), rgba(0,0,0,0.7)), url("Images/guc2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #e8e8e8;
+}
+
+/* Dark transparent overlay (optional, helps readability) */
+.page-overlay {
+    width: 100%;
+    padding: 40px 16px;
+    background: rgba(0,0,0,0.30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card container: matches your Admin solid card style */
+.home-card {
+    background: rgba(32, 32, 40, 0.95);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 14px;
+    padding: 24px 26px;
+    max-width: 700px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.8);
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+    .home-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 45px rgba(0,0,0,0.95);
+    }
+
+/* Optional fade-in */
+.fade-in {
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* TITLES & TEXT */
+.home-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #ffb074; /* pastel orange like admin */
+    font-size: 28px;
+    text-align: center;
+    text-shadow: 0 0 8px rgba(0,0,0,0.6);
+}
+
+.home-subtitle {
+    margin-top: 4px;
+    margin-bottom: 18px;
+    color: #d1d5db;
+    font-size: 14px;
+}
+
+/* Inputs */
+.text-input {
+    width: 100%;
+    max-width: 320px;
+    padding: 10px 12px;
+    margin-top: 6px;
+    background: rgba(0,0,0,0.55);
+    color: #ffb074;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.2);
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+    .text-input:focus {
+        border-color: #ffb074;
+        box-shadow: 0 0 8px rgba(255,176,116,0.8);
+        outline: none;
+    }
+
+/* BUTTONS – reuse your muted yellow style */
+.role-button {
+    display: inline-block;
+    padding: 10px 22px;
+    margin-top: 10px;
+    background: linear-gradient(45deg, #d8b444, #e7cd74); /* softer yellow */
+    color: #1a1a1a;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    filter: brightness(0.88);
+    box-shadow: 0 4px 14px rgba(255,204,51,0.22);
+    transition: all 0.25s ease;
+}
+
+/* let hr-btn/admin-btn/emp-btn all share same base look for now */
+.hr-btn,
+.admin-btn,
+.emp-btn {
+    /* hook here later if you want different colors per role */
+}
+
+.role-button:hover {
+    transform: scale(1.03);
+    filter: brightness(0.95);
+    box-shadow: 0 6px 20px rgba(255,204,51,0.35);
+}
+
+.role-button:active {
+    transform: scale(0.97);
+}
+
+/* FOOTER LINK */
+.home-footer {
+    color: #ffb074;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+    .home-footer:hover {
+        text-decoration: underline;
+    }
+
+/* Labels inside card (like LightGreen feedback ones) */
+.home-card label {
+    color: #e5e7eb;
+    font-size: 14px;
+}

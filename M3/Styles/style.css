@@ -1,0 +1,131 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap'); /* Base Body Styling */
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    background: #f4f7fb;
+    margin: 0;
+    padding: 0;
+}
+/* Centered Form Container */
+
+form {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+/* Headings */
+
+h2, h3 {
+    text-align: center;
+    color: #003d73; /* Academic deep blue */
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+/* Paragraphs */
+
+p {
+    font-size: 15px;
+    color: #333;
+}
+/* TextBoxes */
+
+input[type="text"], input[type="password"], textarea, select, .aspNetDisabled {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 18px;
+    border: 1px solid #c9d6e8;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+    input:focus, textarea:focus, select:focus {
+        border-color: #0066cc;
+        box-shadow: 0 0 6px rgba(0, 102, 204, 0.35);
+    }
+/* Buttons */
+
+asp\:button, button, input[type="submit"] {
+    background: #0066cc;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+    asp\:button:hover, button:hover, input[type="submit"]:hover {
+        background: #004a99;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+    }
+
+    asp\:button:active {
+        background: #003d80;
+    }
+/* Labels */
+
+label, asp\:label {
+    font-size: 15px;
+    color: #222;
+}
+    /* Error messages */
+
+    .error-message, asp\:label[ForeColor="Red"] {
+        color: #cc0000 !important;
+        font-weight: 500;
+    }
+/* GridView Styling */
+
+.gridview, table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+    .gridview th {
+        background: #003d73;
+        color: white;
+        padding: 12px;
+        font-weight: 600;
+    }
+
+    .gridview td {
+        padding: 10px;
+        border-bottom: 1px solid #e7e7e7;
+    }
+
+    .gridview tr:nth-child(even) {
+        background: #f5f9ff;
+    }
+    /* Calendar Control Styling (ASP.NET) */
+
+    table[style*="Calendar"] {
+        margin: auto;
+        border-collapse: collapse;
+        background: #ffffff;
+        box-shadow: 0 3px 16px rgba(0,0,0,0.08);
+        border-radius: 12px;
+    }
+
+        table[style*="Calendar"] td, table[style*="Calendar"] th {
+            padding: 10px;
+        }
+/* Dashboard Alignment */
+
+.actions-list p {
+    text-align: center;
+}
+/* Home Page Buttons */
+
+.dashboard-button {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 12px;
+}

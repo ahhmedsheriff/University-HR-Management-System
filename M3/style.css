@@ -1,0 +1,254 @@
+﻿/* ========= ACADEMIC EMPLOYEE THEME (dark + blue accents, photo bg) ========= */
+
+/* Page background */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #e5e7eb;
+    /* same idea as HR/Admin: photo + dark overlay */
+    background: linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.70)), url("Images/guc5.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Main form container behaves like a card on all academic pages */
+form#form1 {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 26px 30px;
+    /* a bit lighter than before */
+    background: rgba(28, 36, 56, 0.94); /* softer navy card */
+    border-radius: 18px;
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+    text-align: left;
+}
+
+/* Generic headings */
+h2 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    color: #dbeafe; /* soft light blue */
+    font-size: 24px;
+}
+
+h3 {
+    color: #e5e7eb;
+}
+
+/* Employee label etc. */
+.emp-id {
+    font-weight: 600;
+    color: #60a5fa;
+}
+
+/* === Inputs (all pages) === */
+input[type="text"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+    padding: 8px 10px;
+    margin: 4px 0;
+    border-radius: 8px;
+    border: 1px solid rgba(148, 163, 184, 0.8);
+    background: rgba(15, 23, 42, 0.9);
+    color: #e5e7eb;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="date"]:focus,
+    select:focus,
+    textarea:focus {
+        outline: none;
+        border-color: #60a5fa;
+        box-shadow: 0 0 8px rgba(96, 165, 250, 0.9);
+    }
+
+/* Placeholders */
+::placeholder {
+    color: rgba(148, 163, 184, 0.75);
+}
+
+/* ===== DASHBOARD BUTTONS (Home, Payroll, Performance, etc.) ===== */
+
+.dashboard-button {
+    display: inline-block;
+    margin: 6px 0;
+    padding: 10px 20px;
+    /* BLUE instead of yellow, but same pill style */
+    background: linear-gradient(45deg, #2563eb, #38bdf8);
+    color: #f9fafb;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 5px 18px rgba(37, 99, 235, 0.55);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+    .dashboard-button:hover {
+        transform: translateY(-1px) scale(1.02);
+        box-shadow: 0 9px 26px rgba(37, 99, 235, 0.85);
+        filter: brightness(1.04);
+    }
+
+    .dashboard-button:active {
+        transform: translateY(0) scale(0.98);
+        box-shadow: 0 2px 10px rgba(15, 23, 42, 0.9);
+    }
+
+/* Logout variant if used */
+.logout-btn {
+    background: linear-gradient(45deg, #ef4444, #f97373);
+    box-shadow: 0 5px 18px rgba(239, 68, 68, 0.6);
+}
+
+/* ===== HOME PAGE LIST (Home.aspx) ===== */
+
+.actions-list {
+    margin-top: 20px;
+}
+
+    .actions-list p {
+        margin: 0 0 10px;
+    }
+
+/* ===== GRIDVIEW (Payroll + Performance) ===== */
+
+.gridview {
+    margin-top: 15px;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 13px;
+    color: #e5e7eb;
+}
+
+    .gridview th,
+    .gridview td {
+        border: 1px solid rgba(55, 65, 81, 0.9);
+        padding: 6px 8px;
+    }
+
+    .gridview th {
+        background: linear-gradient( 90deg, rgba(37, 99, 235, 0.95), rgba(56, 189, 248, 0.8) );
+        color: #f9fafb;
+    }
+
+    .gridview tr:nth-child(even) {
+        background-color: rgba(17, 24, 39, 0.9);
+    }
+
+    .gridview tr:nth-child(odd) {
+        background-color: rgba(15, 23, 42, 0.95);
+    }
+
+    .gridview tr:hover {
+        background-color: rgba(59, 130, 246, 0.25);
+    }
+
+/* Error messages */
+#errorMsg,
+#loginError,
+#errorLabel {
+    color: #fca5a5;
+    font-weight: 500;
+}
+
+/* ===== LEAVES PAGE: CARD LAYOUT ===== */
+
+.leaves-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Collapsible cards */
+.card {
+    border-radius: 12px;
+    margin: 12px 0;
+    padding: 0;
+    background: rgba(28, 36, 56, 0.96); /* slightly lighter than before */
+    border: 1px solid rgba(37, 99, 235, 0.5);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+}
+
+.card-header {
+    padding: 12px 16px;
+    cursor: pointer;
+    font-weight: 600;
+    background: linear-gradient( 90deg, rgba(37, 99, 235, 0.7), rgba(56, 189, 248, 0.45) );
+    color: #f9fafb;
+}
+
+.card-body {
+    padding: 12px 16px;
+    display: none;
+    background: rgba(19, 28, 48, 0.98);
+}
+
+.form-row {
+    margin-bottom: 8px;
+}
+
+.form-label {
+    display: inline-block;
+    width: 220px;
+    font-weight: 600;
+    color: #e5e7eb;
+}
+
+.small-note {
+    font-size: 0.9em;
+    color: #9ca3af;
+    margin-bottom: 10px;
+}
+
+/* Generic small buttons inside Leaves */
+.btn {
+    padding: 7px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.9);
+    background: rgba(17, 24, 39, 0.95);
+    color: #e5e7eb;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+
+    .btn:hover {
+        background: rgba(31, 41, 55, 1);
+    }
+
+/* Primary blue button inside Leaves (same blue as dashboard-button) */
+.btn-primary {
+    background: linear-gradient(45deg, #2563eb, #38bdf8);
+    border-color: #1d4ed8;
+    color: #f9fafb;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.6);
+}
+
+    .btn-primary:hover {
+        filter: brightness(1.05);
+        box-shadow: 0 7px 20px rgba(37, 99, 235, 0.85);
+    }
+
+/* Success / error labels inside Leaves */
+.success {
+    color: #6ee7b7;
+    font-weight: 600;
+    margin-left: 8px;
+}
+
+.error {
+    color: #fca5a5;
+    font-weight: 600;
+    margin-left: 8px;
+}
